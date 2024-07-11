@@ -1,0 +1,38 @@
+You are given a list of n
+ integers, and your task is to calculate the number of distinct values in the list.
+
+Input
+The first input line has an integer n
+: the number of values.
+
+The second line has n
+ integers x1,x2,…,xn
+.
+
+Constraints:
+
+1≤n≤2⋅105
+1≤xi≤109
+Output
+Print one integer: the number of distinct values.
+
+
+//code for the above problem
+
+#include <iostream>
+#include<unordered_set>
+using namespace std;
+int main()
+{
+    int n,i,a;
+    cin>>n;
+    unordered_set<int> s;
+    for(i=0;i<n;i++)
+    {
+        cin>>a;
+        s.insert(a);
+    }
+    cout<<s.size();
+
+    return 0;
+}
